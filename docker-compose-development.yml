@@ -1,7 +1,7 @@
 #
-# This source file is part of the Apodini Template open source project
+# This source file is part of the Horn as a Service open source project
 #
-# SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+# SPDX-FileCopyrightText: 2022 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
 #
 # SPDX-License-Identifier: MIT
 #
@@ -9,10 +9,10 @@
 version: '3.9'
 
 services:
-  # An Apodini Example Web Service
-  example-web-service:
-    container_name: "template-web-service"
-    image: "apodini/template:latest"
+  # Horn as a Service
+  horn-as-a-service:
+    container_name: "horn-as-a-service"
+    image: "jass2022/hornasaservice:latest"
     build:
       context: ./
       dockerfile: ./Dockerfile

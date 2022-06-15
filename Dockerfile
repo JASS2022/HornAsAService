@@ -1,7 +1,7 @@
 #
-# This source file is part of the Apodini Template open source project
+# This source file is part of the Horn as a Service open source project
 #
-# SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+# SPDX-FileCopyrightText: 2022 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
 #
 # SPDX-License-Identifier: MIT
 #
@@ -41,9 +41,9 @@ RUN [ -d "$(swift build --package-path /build -c release --show-bin-path)/Apodin
     && mv "$(swift build --package-path /build -c release --show-bin-path)/Apodini_ApodiniOpenAPI.resources" ./ \
     && chmod -R a-w ./Apodini_ApodiniOpenAPI.resources \
     || echo No resources to copy
-RUN [ -d "$(swift build --package-path /build -c release --show-bin-path)/WebService_ApodiniTemplate.resources" ] \
-    && mv "$(swift build --package-path /build -c release --show-bin-path)/WebService_ApodiniTemplate.resources" ./ \
-    && chmod -R a-w ./WebService_ApodiniTemplate.resources \
+RUN [ -d "$(swift build --package-path /build -c release --show-bin-path)/WebService_HornAsAService.resources" ] \
+    && mv "$(swift build --package-path /build -c release --show-bin-path)/WebService_HornAsAService.resources" ./ \
+    && chmod -R a-w ./WebService_HornAsAService.resources \
     || echo No resources to copy
 
 # ================================

@@ -1,9 +1,9 @@
 // swift-tools-version:5.5
 
 //
-// This source file is part of the Apodini Template open source project
+// This source file is part of the Horn as a Service open source project
 //
-// SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+// SPDX-FileCopyrightText: 2022 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
 //
 // SPDX-License-Identifier: MIT
 //
@@ -12,7 +12,7 @@ import PackageDescription
 
 
 let package = Package(
-    name: "ApodiniTemplate",
+    name: "HornAsAService",
     platforms: [
         .macOS(.v11)
     ],
@@ -32,12 +32,9 @@ let package = Package(
                 .product(name: "Apodini", package: "Apodini"),
                 .product(name: "ApodiniREST", package: "Apodini"),
                 .product(name: "ApodiniOpenAPI", package: "Apodini")
-            ]
-        ),
-        .testTarget(
-            name: "WebServiceTests",
-            dependencies: [
-                .target(name: "WebService")
+            ],
+            resources: [
+                .process("Resources")
             ]
         )
     ]
